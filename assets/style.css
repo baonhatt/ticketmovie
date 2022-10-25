@@ -517,18 +517,18 @@ html{
 }
 /* pc */
 @media  (max-width: 1023px){
-    
 }
 /* tablet */
 @media (min-width: 1023px) and (max-width: 739px) {
     
 }
 /* mobile */
-@media (max-width: 739px) {
-    
-}
-@media only screen and (max-width: 46.1875em){
+
+@media  (max-width: 540px){
     .mobile{
+        display: block;
+    }
+    .mobile-menu-btn .ti-menu{
         display: block;
     }
 }
