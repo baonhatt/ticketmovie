@@ -32,8 +32,8 @@ html{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 #wrapper{
-   
-    
+    width: 100%;
+    overflow: hidden;    
 }
 #header{
     width: 100%;
@@ -140,7 +140,7 @@ html{
     margin-right: 10px;
 }
 #content .member-name{
-    font-family: monospace;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1.5rem;
     margin: 25px 5px ;
 }
@@ -342,15 +342,27 @@ a.active, .navbar a:hover {
 }
 .btn{
     padding: 7px 8px 9px;
-    background-color: #000;
-    color: #fff;
+    border-color: #E63226;
+    /* color: #fff; */
+    background-image: -webkit-linear-gradient(45deg, #E63226 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #E63226 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
     border: none;
     cursor: pointer;
-}
+    border-radius: 15px;
+    width: 100px;
+    font-weight: 500;
+    font-size: 14px;
+}    
+
 .btn:hover{
-    background-color: #ccc;
+    /* background-color: #ccc;
     color: #000;
-    transition: 0.5s;
+    transition: 0.5s; */
+    background-position: 0;
 }
 .modal{
     position: fixed;
@@ -467,12 +479,11 @@ a.active, .navbar a:hover {
     text-align: center  !important;
 }
 .info-contact{
-    margin:  0 20%;
     display: flex;
+    margin: 0 auto;
 }
 #contact{
     width: 100%;
-    padding: 32px 0 25px;
 }
 .section-heading {
     text-align: center;
@@ -546,7 +557,12 @@ a.active, .navbar a:hover {
     .check-btn{
         display: block;
     }
-    
+    .col-half{
+        width: 80%;
+    }
+    .col-mobile{
+        margin: 0 4%;
+    }
     .navbar ul{
         position: fixed;
         z-index: 1;
@@ -564,6 +580,7 @@ a.active, .navbar a:hover {
     #check:checked ~ ul{
         right: -1%;
     }
+   
 }
 /* mobile */
 
@@ -572,15 +589,12 @@ a.active, .navbar a:hover {
         display: block;
        
     }
-    .info-contact{
-        margin: 0 12%;
-    }
+    
+   
     label.logo{
         padding: 0 10px;
         line-height: 52px;
     }
-    .col-mobile{
-        float: left;
-    }
+  
     
 }
