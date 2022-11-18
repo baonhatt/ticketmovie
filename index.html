@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/responsive.css">
+    <link rel="stylesheet" href="./assets/main.js">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <title>Document</title>
     
 </head>
@@ -19,19 +22,18 @@
                     <i class="fa-solid fa-bars"></i>
                 </label>
                 <label  class="logo">Paramix</label>
-                <ul>
-                    <li><a class="active"href="">Home</a></li>
-                    <li><a href="">Contact</a></li> 
-                    <li><a href="">About</a></li>   
-                    <li><a href="">Login</a></li>   
-                    <li><a href="">Feedback</a></li>
-                </ul>    
+                <ul class="nav-items">
+                    <li class="active"><a   href="#">Home</a></li>
+                    <li><a   href="#">Contact</a></li> 
+                    <li><a   href="#">About</a></li>   
+                    <li><a   href="#">Login</a></li>   
+                    <li><a   href="#">Feedback</a></li>
+                </ul>  
             </div>
 
             <div id="slider" >
                 <div class="text-content">
                     <h2 class="text-heading">WELLCOME TO PANAMETRIX CINEMAX</h2>
-                    <div class="text-discription"></div>
                 </div>
             </div>
 
@@ -227,6 +229,7 @@
                 
         </div>  
         <script>
+
             const btnbuys = document.querySelectorAll('.js-buy-ticket')
             const btnexit = document.querySelector('.js-btn-close')
             const modalContainer = document.querySelector('.js-modal-container')
@@ -280,9 +283,13 @@
 
                 menuItems.onclick = function() {
                     header.style.height = null;
-                   
                 }
             }
+        </script>
+        <script type="text/javascript">
+            $(document).on('click','ul li', function(){
+                $(this).addClass('active').siblings().removeClass('active')
+            });
         </script>
     </body>
 </html>
