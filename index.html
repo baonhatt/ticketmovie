@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/responsive.css">
     <link rel="stylesheet" href="./assets/main.js">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <title>Document</title>
@@ -21,7 +22,7 @@
                 <label for="check" class="check-btn">
                     <i class="fa-solid fa-bars"></i>
                 </label>
-                <label  class="logo">Paramix</label>
+                <a href="" class="logo">Paramix</a>
                 <ul class="nav-items">
                     <li class="active"><a   href="#">Home</a></li>
                     <li><a   href="#">Contact</a></li> 
@@ -32,8 +33,8 @@
             </div>
 
             <div id="slider" >
-                <div class="text-content">
-                    <h2 class="text-heading">WELLCOME TO PANAMETRIX CINEMAX</h2>
+                <div class="text-content" >
+                    <h2 class="text-heading" data-aos="fade-right">WELLCOME TO PANAMETRIX CINEMAX</h2>
                 </div>
             </div>
 
@@ -44,16 +45,16 @@
                     <p class="section-sub-heading">We love music</p>
                     <p class="about-text">
                     </p>
-                    <div class="row members-list">
-                        <div class=" col col-third text-center ">
+                    <div class="row members-list" >
+                        <div class=" col col-third text-center " data-aos="flip-up">
                             <h5 class="member-name">Matrix (2021)</h5    >
                             <img src="./assets/img/matrix.jpg" alt="Avatar" class="member-avatar">
                         </div>
-                        <div class=" col col-third text-center ">
+                        <div class=" col col-third text-center " data-aos="flip-up">
                             <h5 class="member-name">Black Widow (2021)</h5    >
                             <img src="./assets/img/black-widow.jpg" alt="Avatar" class="member-avatar">
                         </div>
-                        <div class=" col col-third text-center ">
+                        <div class=" col col-third text-center " data-aos="flip-up">
                             <h5 class="member-name">Vệ sĩ sát thủ  (2021)</h5    >
                             <img src="./assets/img/hitman.jpg" alt="Avatar" class="member-avatar">
                         </div>
@@ -70,7 +71,7 @@
                 <div id="tour" class="content-section "> 
                     <h2 class="section-heading ">MOVIES OF WEEK</h2>
                     <p class="section-sub-heading ">Remember to book your tickets</p>
-                    <ul class="ticket-list ">
+                    <ul class="ticket-list " >
                         <li>NGƯỜI NHỆN: KHÔNG CÒN NHÀ <span class="Sold-out">còn 10 vé</span></li>   
                         <li>SĂN PHÙ THỦY <span class="Sold-out">còn 3 vé</span></li>
                         <li>MA TRẬN: HỒI SINH<span class="quantity">90</span></li>
@@ -142,7 +143,7 @@
             </div>
             <div id="contact">
                 <!-- Begin  -->
-                <div id="contact" class="contact-section">
+                <div id="contact" class="contact-section" data-aos="fade-left">
                     <h2 class="section-heading text-black">LIÊN HỆ</h2>
                     <div class=" col-half info-contact ">
                         <div class="col-mobile  ">
@@ -286,10 +287,19 @@
                 }
             }
         </script>
+        <!-- active navbar  -->
         <script type="text/javascript">
             $(document).on('click','ul li', function(){
                 $(this).addClass('active').siblings().removeClass('active')
             });
+        </script>
+        <!-- animation for section  -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init({
+            duration: 3000,
+            once: true,
+          });
         </script>
     </body>
 </html>

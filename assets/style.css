@@ -194,7 +194,10 @@ li.active, .navbar li:hover {
     background-color:#E63226;
     
 }
-
+a.logo{
+    text-decoration: none;
+    color: #ccc;
+}
 .logo{
     font-size: 1.5rem;
     line-height: 52px;
@@ -352,9 +355,10 @@ li.active, .navbar li:hover {
 }
 .place-discription{
     font-weight: 400;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppin', sans-serif;
     margin-bottom: 10px
 }
+
 .btn{
     padding: 7px 8px 9px;
     border-color: #E63226;
